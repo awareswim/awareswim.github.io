@@ -6,6 +6,7 @@
 <title>Aware Swim</title>
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAADN0lEQVR4nO3XXWvbVhgH8P+joyPHtes5ZkmbJlXIy5LMaRxa0zqlpSqhL4MUdrEKSq/2HfYBdrW7bfeFXe8TmGHSbt2y0rS0hrJuLA2haaBxXuq2iV9iW5Z8dhHMGIzCwJFWeH5XQkI6fx2dcx4dgDHGGGOMMcYYY4wxxhhjPtEAUNAhWAAIANJnxyYuX05FggyiBdlufa/27cvN1xcAEGyIwIL4jAB4t249lkKIB57n3gCg7ACCtMME0aa6du2SWSwWKm8rb+5EQ7Er+fxysX3NzzBBjABlWVa01UJkfPx0TGhirdIoXQdAluX/NPB7BBAARUQ4d2H6uqawtlMuHXfc2hdLTzfOYf+DtPwM5OcIIACwLEtPnRz6vFKtvFpYePJ45nRmgUh0fzx9fBL7Lx/UwnzgNAA4MT3wVerk4Cftc0opOTk98M3YZN/XAGBZ0ANLeIA0AJiYMk9NTB3LAcDo6GgIAObmzg+nz45NjJ/oe5hOpyV8npZ+DTcCACHcLtVS/QCwsrLSsKwzA6XSbjy/uLwEpZxqc+MzAMr28Z/Az97WbNump0v3vxekVWUodCdkhN926Ym7WrjZv7n+4jsics1jQzdzuXuvsV8OD7wkBrIRmTplpkmI8m+PVpcBwPrUin+gmp7juKTrnpvN5veCyNUJhL879V3H/+U57zr33vtnp3zp//a4U40RADU7N9tveI5z+HDf7m5texhw0CgbL3Rdj0jphnO5X9bPX0yf6elOrK6vbxrxeDQ6P7/4DICanc0ckdFD8cGjHz1f3fhzAHU3QqQKiUSP1PV6pVCsjQjPa92+vfgHOrg2dKwK2LYtwjqGIcVIuVwmzW2ZpPTB3t4GGREaMgxjOGklI62WMgBNCKGiUhrtmk8Ui7paU31YKBSk9FSvENoQkQxph2SX63ZFDaCHpOyxbVt2KjPQuQ5QyWRSVXa8R7USnmQymaZp7t0tbu79lExebfR2N393HPEwXAk3+o+M3E+lZraU2lnb3t7aaN+fkImyEOpZNputV6sib5r13MzMr1vNsngZixXe5HL3fpz/YeFnAF6HMrP/g39b6RljjDHGGGOMMcYYY+zA/AVHbg2sIxxbcgAAAABJRU5ErkJggg=="/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet"/>
+<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=R5FFdQ"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -204,13 +205,18 @@ body{
 
 <script>
 function handleSubmit(){
-  const val=document.getElementById('emailInput').value.trim();
-  if(!val||!val.includes('@')){
-    document.querySelector('.input-row').style.borderBottomColor='rgba(180,80,60,0.4)';
-    return;
-  }
-  document.getElementById('formState').style.display='none';
-  document.getElementById('successState').style.display='flex';
+const val=document.getElementById('emailInput').value.trim();
+if(!val||!val.includes('@')){
+document.querySelector('.input-row').style.borderBottomColor='rgba(180,80,60,0.4)';
+return;
+}
+var klaviyo = window._learnq || [];
+klaviyo.push(['subscribe', {
+'list': 'XhRpd4',
+'email': val
+}]);
+document.getElementById('formState').style.display='none';
+document.getElementById('successState').style.display='flex';
 }
 </script>
 </body>
